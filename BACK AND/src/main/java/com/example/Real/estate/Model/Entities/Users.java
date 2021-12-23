@@ -1,9 +1,14 @@
 package com.example.Real.estate.Model.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table
 public class Users {
@@ -13,6 +18,10 @@ public class Users {
     private String Name;
     private String email;
     private int mobilenambwr;
+
+    //@OneToMany(mappedBy = "Realestate")
+    //@JsonIgnore
+    //private List<Users> items = new ArrayList<>();
 
     public Users(int id, String name, String email, int mobilenambwr) {
         this.id = id;

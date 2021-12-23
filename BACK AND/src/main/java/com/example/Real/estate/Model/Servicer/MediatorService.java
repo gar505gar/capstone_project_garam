@@ -21,13 +21,17 @@ public class MediatorService {
     public List<Mediator>getMediators(){
         return mediatorRepository.findAll();
     }
+
+
     public Optional<Mediator>getMediator(Integer MediatorId){
         return mediatorRepository.findById(MediatorId);
     }
     public void  addNewMediator(Mediator mediator){
        mediatorRepository.save(mediator);
     }
-    public void deleteMediator(Integer MediatorId){
-        mediatorRepository.deleteAllById(Collections.singleton(MediatorId));
-    }
+
+
+//    public void deleteMediator(Integer MediatorId){
+//        mediatorRepository.deleteAllById(MediatorId);
+//    }
 }

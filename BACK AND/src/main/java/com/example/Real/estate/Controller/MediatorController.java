@@ -22,8 +22,8 @@ private MediatorService mediatorService;
     public void registerNewMediator(@RequestBody Mediator mediator){
         mediatorService.addNewMediator(mediator);
     }
-    @DeleteMapping(path = "delete/{MediatorId}")
-    public void deleteMediator(@PathVariable ("MediatorId") Integer MediatorId){
-        mediatorService.deleteMediator(MediatorId);
-    }
+//    @DeleteMapping(path = "delete/{MediatorId}")
+//    public void deleteMediator(@PathVariable ("MediatorId") Integer MediatorId){
+//        mediatorService.deleteMediator(MediatorId);
+//    }
 }
