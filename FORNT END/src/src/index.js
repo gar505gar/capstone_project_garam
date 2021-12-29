@@ -11,12 +11,14 @@ import Lands from "./routes/Lands"
 import Buildings from './routes/buildings';
 import Realestates from './routes/Realestates';
 import Homepage from './routes/Homepage'; //
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes> 
       <Route path="/" element={<App />}>
 
         <Route path="home" element={<Home />} />
+        <Route path="buildings" element={< Buildings/>} />
 
         <Route path="Homepage" element={<Homepage />} />
 

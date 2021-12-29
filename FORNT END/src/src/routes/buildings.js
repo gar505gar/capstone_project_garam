@@ -1,6 +1,5 @@
 import React from "react";
 import {Outlet, Link } from "react-router-dom";
-
 export default function Buildings() {
   return (
     <div>
@@ -11,6 +10,9 @@ export default function Buildings() {
 <button> حذف</button>
 <label>ارفق رقم القطعه</label>
 <input></input>
+
+
     </div>
+
   )
 }

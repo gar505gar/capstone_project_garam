@@ -9,7 +9,7 @@ export default function Realsteat() {
   const [space, setspace] = useState("")
    
 
-  // const [myUser, setMyUser]=useState({id:"", name:"", email:"", mobilenambwr:""})
+  const [myUser, setMyUser]=useState({id:"", name:"", email:"", mobilenambwr:""})
 
 
   function handleid(event) {
@@ -19,10 +19,7 @@ export default function Realsteat() {
 }
 function handlename(event) {
 
-  setlocation((event.target.value));
-
-}
-
+  setlocation((event.target.value));}
 
 function handlemobilenambwr(event) {
 
@@ -37,14 +34,14 @@ let nuwRealestate = {
   space:space,
 }
 
-// useEffect(()=>{
-//   axios.get("api/User")
-//    .then(response=>{
-//      console.log(response.data)
-//      setMyUser(response.data[0])
-//   })
-//   return()=>{}
-// },[])
+useEffect(()=>{
+  axios.get("api/User")
+   .then(response=>{
+     console.log(response.data)
+     setMyUser(response.data[0])
+  })
+  return()=>{}
+},[])
 function handleClick(event){
   event.preventDefault();
   console.log("add func")
@@ -187,4 +184,4 @@ function handleClick(event){
 
 //     );
 //   }
-  
+// }

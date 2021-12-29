@@ -14,6 +14,7 @@ export default function Lands() {
 <p></p>
 <img src="https://img.lovepik.com/photo/20211208/medium/lovepik-aerial-farmland-picture_501585910.jpg" width="200px"></img>
 
+<Link to="/Buildings"><button>vvv </button></Link> |{" "}
 
 
 <input></input>

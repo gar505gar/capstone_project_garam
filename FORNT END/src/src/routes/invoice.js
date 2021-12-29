@@ -14,4 +14,4 @@ export default function Invoice() {
       <p>Due Date: {invoice.due}</p>
     </main>
   );
-}
+  }
