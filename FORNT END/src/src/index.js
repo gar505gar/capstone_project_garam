@@ -11,7 +11,7 @@ import Lands from "./routes/Lands"
 import Buildings from './routes/buildings';
 import Realestates from './routes/Realestates';
 import Homepage from './routes/Homepage'; //
-
+import Onherservice from './routes/Onherservice'; 
 ReactDOM.render(
   <BrowserRouter>
     <Routes> 
@@ -27,6 +27,10 @@ ReactDOM.render(
         <Route path="realestate" element={<Realestate />}/>
         <Route path="realsteat" element={<Realestate/>}/>
         <Route path="lands" element={<Lands />}/>
+
+        <Route path="Onherservice" element={<Onherservice />}/>
+
+
         <Route path="buildings" element ={<Buildings/>}/>
         <Route path=":invoiceId" element={<Realestate />} />
         <Route path="realsteats" element={<Realestates/>}/>
@@ -36,7 +40,12 @@ ReactDOM.render(
             index
             element={
               <main style={{ padding: "1rem" }}>
+
+
                 <p>Select an invoice</p>
+
+             
+               
               </main>
             }
           />

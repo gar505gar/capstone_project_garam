@@ -6,9 +6,9 @@ export default function Home(){
         <main style={{padding :"1rem 0"}}> 
         <h2></h2>
 
-        <Link to="/users">اراضي </Link> |{" "}
+        {/* <Link to="/users">اراضي </Link> |{" "}
         <Link to="/users">مباني </Link> |{" "}
-        <Link to="/users">خدمات اخرى</Link> |{" "}
+        <Link to="/users">خدمات اخرى</Link> |{" "} */}
         </main>
     );
 }

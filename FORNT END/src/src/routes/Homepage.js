@@ -45,7 +45,7 @@ export default class AllRel extends Component {
                                 <td>{item.location}</td>
                                
                                 <td>{item.space}</td>
-                                <td><button >DM</button></td>
+                                {/* <td><button ></button></td> */}
                                 <td><button onClick={(e) => this.deleteSpecialist(item.id, e)}>delete</button></td>
                             </tr>
                         )))
