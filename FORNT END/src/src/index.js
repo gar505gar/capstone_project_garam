@@ -12,6 +12,7 @@ import Buildings from './routes/buildings';
 import Realestates from './routes/Realestates';
 import Homepage from './routes/Homepage'; //
 import Onherservice from './routes/Onherservice'; 
+import Login from './routes/Login';
 ReactDOM.render(
   <BrowserRouter>
     <Routes> 
@@ -22,6 +23,7 @@ ReactDOM.render(
 
         <Route path="Homepage" element={<Homepage />} />
 
+        <Route path="Login" element={<Login />} />
 
 
         <Route path="realestate" element={<Realestate />}/>

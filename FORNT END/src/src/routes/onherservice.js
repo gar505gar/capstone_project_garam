@@ -1,20 +1,20 @@
 
- export default function Onherservice() {
-   return (
-<div>
-<h1>اختيار</h1>
- <button> اضافة</button>
+//  export default function Onherservice() {
+//    return (
+// <div>
+// <h1>اختيار</h1>
+//  <button> اضافة</button>
 
 
- <button> حذف</button>
- <label>ارفق رقم القطعه</label>
+//  <button> حذف</button>
+//  <label>ارفق رقم القطعه</label>
 
- <p></p>
+//  <p></p>
  
 
 
 
-/<input></input>
-</div>
-   )
-}
+// /<input></input>
+// </div>
+//    )
+// }

@@ -6,19 +6,26 @@ import javax.persistence.*;
 @Table
 public class Realestate {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String location;
     private String space;
+
 @ManyToOne
 @JoinColumn(name = "userId",referencedColumnName = "userId")
 private Users users;
 
-    public Realestate(int id, String location, String space, Users users) {
+@ManyToOne
+@JoinColumn(name="med_id",referencedColumnName = "id")
+private Mediator mediator;
+
+
+    public Realestate(int id, String location, String space, Users users, Mediator mediator) {
         this.id = id;
         this.location = location;
         this.space = space;
         this.users = users;
+        this.mediator = mediator;
     }
 
     public Realestate() {
@@ -54,5 +61,13 @@ private Users users;
 
     public void setUsers(Users users) {
         this.users = users;
+    }
+
+    public Mediator getMediator() {
+        return mediator;
+    }
+
+    public void setMediator(Mediator mediator) {
+        this.mediator = mediator;
     }
 }

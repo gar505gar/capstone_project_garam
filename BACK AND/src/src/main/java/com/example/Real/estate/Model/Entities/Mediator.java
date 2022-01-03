@@ -1,9 +1,11 @@
 package com.example.Real.estate.Model.Entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table
 public class Mediator {
@@ -11,17 +13,20 @@ public class Mediator {
     @Id
     @GeneratedValue
     private int id;
-    private String Name;
+    private String name;
     private String email;
     private int mobile;
+
+    @OneToMany(mappedBy = "mediator")
+    @JsonIgnore
+   private List<Realestate> items = new ArrayList<>();
 
 
     public Mediator(int id, String name, String email, int mobile) {
         this.id = id;
-        Name = name;
+        this.name = name;
         this.email = email;
         this.mobile = mobile;
-
     }
 
     public Mediator() {
@@ -36,11 +41,11 @@ public class Mediator {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getEmail() {
@@ -59,15 +64,22 @@ public class Mediator {
         this.mobile = mobile;
     }
 
-
-    @Override
-    public String toString() {
-        return "Mediator{" +
-                "id=" + id +
-                ", Name='" + Name + '\'' +
-                ", email='" + email + '\'' +
-                ", mobile=" + mobile +
-
-                '}';
+    public List<Realestate> getItems() {
+        return items;
     }
+
+    public void setItems(List<Realestate> items) {
+        this.items = items;
+    }
+
+    //    @Override
+//    public String toString() {
+//        return "Mediator{" +
+//                "id=" + id +
+//                ", Name='" + Name + '\'' +
+//                ", email='" + email + '\'' +
+//                ", mobile=" + mobile +
+//
+//                '}';
+//    }
 }

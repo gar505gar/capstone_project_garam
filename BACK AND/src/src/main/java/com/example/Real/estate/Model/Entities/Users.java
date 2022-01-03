@@ -17,18 +17,20 @@ public class Users {
     private int userId;
     private String name;
     private String email;
+    private String password;
     private int phone;
 
     @OneToMany(mappedBy = "users")
     @JsonIgnore
     private List<Realestate> items = new ArrayList<>();
 
-    public Users(int userId, String name, String email, int phone ,List<Realestate> items) {
+    public Users(int userId, String name, String email, String password,  int phone ,List<Realestate> items) {
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.items = items;
+        this.password=password;
     }
 
     public Users() {
@@ -58,6 +60,14 @@ public class Users {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public int getPhone() {
         return phone;
     }
@@ -73,7 +83,6 @@ public class Users {
     public void setItems(List<Realestate> items) {
         this.items = items;
     }
-
     //    @Override
 //    public String toString() {
 //        return "User{" +
