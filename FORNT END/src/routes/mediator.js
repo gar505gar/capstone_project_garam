@@ -1,3 +1,108 @@
+import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+export default function Mediator() {
+  const [id, setid] = useState("")
+  const [name, setname] = useState("")
+  const [email, setemail] = useState("")
+  const [mobile, setmobile] = useState("")
+   const [mymediator, setMymediator]=useState({id:id, name:name, email:email, mobile:mobile})
+  function handleid(event) {
+    setid((event.target.value));
+}
+function handlename(event) {
+  setname((event.target.value));
+}
+function handleemail(event) {
+  setemail((event.target.value));
+}
+function handlemobile(event) {
+  setmobile((event.target.value));
+}
+let nuwmediator = {
+  id : id ,
+  name :name ,
+email:email,
+mobile:mobile
+}
+ useEffect(()=>{
+  axios.get("api/mediator")
+    .then(response=>{
+      console.log(response.data)
+      setMymediator(response.data)
+   })
+   return()=>{}
+ },[])
+ function handleAddMediator(event){
+  event.preventDefault();
+  console.log("nuwmediator",nuwmediator)
+ axios({
+   method:'post',
+   url:'/api/mediator/add',
+   data:nuwmediator
+ });
+}
+return(
+ <div>
+ <main style={{ padding: "1rem 0" }}>
+<h2>Mediator</h2>
+  <form onSubmit={handleAddMediator}>
+<hr />
+<div>
+        <label> id </label>
+        <input type="text" name="id" placeholder="id" size="15" onChange={handleid} />
+        <hr />
+        <label> name</label>
+        <input type="text" name="name" placeholder="name" size="15" onChange={handlename} />
+        <hr />
+        <label> Email </label>
+        <input type="text" name="email" placeholder="email" size="l5" onChange={handleemail} />
+         <label> phone </label>
+        <input type="text" name="mobile" placeholder="mobile" size="l5" onChange={handlemobile} />
+        <input type="submit" value="submit"/>
+     </div>
+     </form>
+     <h2>my Mediator details are:  {JSON.stringify(mymediator)}</h2>
+</main>
+</div>
+)
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";

@@ -77,7 +77,7 @@ function handleClick(event){
                 <label>  </label>
                 <input type="text" name="email" placeholder="email" size="l5" onChange={handleemail} />
 
-                 <label> mwbayil </label>
+                 <label> phone </label>
                 <input type="text" name="mobilenambwr" placeholder="mobilenambwr" size="l5" onChange={handlemobilenambwr} />
      
                 <input type="submit" value="submit"/>
