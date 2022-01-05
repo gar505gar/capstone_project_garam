@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,6 +14,7 @@ import Realestates from './routes/Realestates';
 import Homepage from './routes/Homepage'; //
 import Onherservice from './routes/Onherservice'; 
 import Login from './routes/Login';
+import Mediator from './routes/mediator';
 ReactDOM.render(
   <BrowserRouter>
     <Routes> 
@@ -27,6 +29,9 @@ ReactDOM.render(
 
 
         <Route path="realestate" element={<Realestate />}/>
+
+        <Route path="mediator" element={<Mediator />} />
+
         <Route path="realsteat" element={<Realestate/>}/>
         <Route path="lands" element={<Lands />}/>
 

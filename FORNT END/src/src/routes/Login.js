@@ -25,17 +25,20 @@ export default function Login() {
         
     }
     return (
-        <main style={{ padding: "1rem 0" }}>
+        // <main style={{ padding: "1rem 0" }}>
+
+        <main class="Gg">
+            
         <h2>تسجيل دخول</h2>
           <form >
-        <hr />
+        <br />
        <div>
                 <label> ايميل </label>
                 <input type="email" id="#{label}" required="required" onChange={ e=>setEmail(e.target.value)}/>
-                <hr />
+                <br />
                 <label> كلمه المرور</label>
                 <input type="password" id="#{label}" required="required" onChange={e => setPassword(e.target.value)}/>
-                <hr />
+                <br />
                 <div class="button-container">
                             <button onClick={login}><span>دخول</span></button>
                         </div>

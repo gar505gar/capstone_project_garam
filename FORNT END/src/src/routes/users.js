@@ -62,8 +62,8 @@ function handleClick(event){
 }
 
     return (
-      <main style={{ padding: "1rem 0" }}>
-
+      // <main style={{ padding: "1rem 0" }}>
+      <main class="Gg">
         <h2>Expenses</h2>
           <form onSubmit={handleClick}>
         <hr />
@@ -83,7 +83,7 @@ function handleClick(event){
                 <input type="submit" value="submit"/>
              </div>
              </form>
-      </main>
+       </main>
 
 
     );

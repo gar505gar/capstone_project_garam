@@ -1,20 +1,26 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+ import { Link } from "react-router-dom";
 export default function Realsteat() {
 
   const [id, setiid] = useState("")
    const [location, setlocation] = useState("")
   const [space, setspace] = useState("")
-   
-
-  const [myUser, setMyUser]=useState({id:"", name:"", email:"", mobilenambwr:""})
+   const[img,setimg] =useState("")
+   const[med_id,setMed_id] =useState("")
+  const [myUser, setMyUser]=useState({id:"", Location:"", space:"", img:""})
 
 
   function handleid(event) {
 
     setiid((event.target.value));
+
+}
+
+function handlemed_id(event) {
+
+  setMed_id((event.target.value));
 
 }
 function handlename(event) {
@@ -28,12 +34,19 @@ function handlemobilenambwr(event) {
 }
 
 
+function handleimg(event) {
+  setimg((event.target.value));
+
+}
+
 let nuwRealestate = {
   id : id ,
   location : location,
   space:space,
+  img:img,
+  mediator:{id:med_id}
 }
-
+console.log(nuwRealestate)
 useEffect(()=>{
   axios.get("api/User")
    .then(response=>{
@@ -47,14 +60,14 @@ function handleClick(event){
   console.log("add func")
  axios({
    method:'post',
-   url:'/realestate/add',
+   url:'/realestate/addn',
    data:nuwRealestate
  });
 }
 
     return (
-      <main style={{ padding: "1rem 0" }}>
-
+      // <main style={{ padding: "1rem 0" }}>
+       <main class="Gg">
         <h2>Expenses</h2>
           <form onSubmit={handleClick}>
         <hr />
@@ -69,7 +82,17 @@ function handleClick(event){
                  <label> space </label>
                 <input type="text" name="space" placeholder="space" size="l5" onChange={handlemobilenambwr} />
      
+                <label> img </label>
+                <input type="text" name="img" placeholder="img" size="l5" onChange={handleimg} />
+     
+                <label> med_id </label>
+                <input type="text" name="med_id" placeholder="med_id" size="l5" onChange={handlemed_id} />
+
+               
                 <input type="submit" value="submit"/>
+
+                <Link to="/Homepage"><button>العقارات </button></Link> 
+
              </div>
              </form>
       </main>

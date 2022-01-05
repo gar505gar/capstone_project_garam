@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import axios, { Axios } from "axios"
+// import { Link } from "react-router-dom";
 //import { Card } from "stream-chat-react";
-export default class AllRel extends Component {
+import axios from "axios";
+export default class Homepage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,6 +14,23 @@ export default class AllRel extends Component {
             const RelList = response.data
             this.setState({ RelList });
         });
+
+        axios({
+         method:"post",
+         url:"/realestate/add",      //اضافه الصور
+         data:{
+             id:1,
+            location:"سكاكا ",
+            space:"1000M",
+             img:"https://tekce.net/files/upload/images/apartments-for-sale-in-serik.jpg",
+             
+         }  
+     })
+
+
+
+
+
     }
     deleteSpecialist(id) {
         //console.log("inside deleteHandler")
@@ -24,6 +42,8 @@ export default class AllRel extends Component {
     }
     render() {
         return (
+
+            <main class="Gg">
             <div>
                 <table >
                     <thead>
@@ -41,9 +61,18 @@ export default class AllRel extends Component {
                                 <td>{item.id}</td>
                                 
                                 
-                                {/* <td><img height="100" width="100" src={item.image} /></td> */}
+                                <td><img height="100" width="100" src={item.img} /></td>            
+                                  {/* عرض الصور */}
+
                                 <td>{item.location}</td>
+                                <td>{item.mediator.id}</td>       
                                
+                                {/* <td>{item.Realestate.id}</td>
+                                  //بيانات الوسيط تظهر في العقار
+                                <td>{item.Realestate.email}</td>
+                                <td>{item.Realestate.mobile}</td>
+
+                                */}
                                 <td>{item.space}</td>
                                 {/* <td><button ></button></td> */}
                                 <td><button onClick={(e) => this.deleteSpecialist(item.id, e)}>delete</button></td>
@@ -53,4 +82,5 @@ export default class AllRel extends Component {
                     </tbody>
                 </table>
             </div>
+            </main>
         )}}

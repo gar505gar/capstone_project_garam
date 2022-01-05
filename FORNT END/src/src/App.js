@@ -22,8 +22,13 @@ export default function App() {
       <Link to="/login" >  تسجيل دخول </Link> |{" "}
       <Link to="/users">تسجيل</Link> |{" "}
       <Link to="/realsteat">ادخال العقارات </Link> |{" "}
+     
         <Link to="/Homepage">العقارات </Link> |{" "}
-        <Link to="/Onherservice">خدمات اخرى </Link> |{" "}
+        <Link to="/Onherservice"> الوسيط</Link> |{" "}
+        <Link to="/mediator">عرض الاوسطاء </Link> |{" "}
+
+
+
       
       
         
