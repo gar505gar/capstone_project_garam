@@ -67,7 +67,7 @@ return(
        </div> */}
  {/* <main style={{ padding: "1rem 0" }}> */}
  <main class="Gg">
-<h2>Mediator</h2>
+{/* <h2>Mediator</h2>
   <form onSubmit={handleAddMediator}>
 <hr />
 <div>
@@ -83,14 +83,16 @@ return(
         <input type="text" name="mobile" placeholder="mobile" size="l5" onChange={handlemobile} />
         <input type="submit" value="submit"/>
      </div>
-     </form>
-     <h2>my Mediator details are: </h2>
+     </form> */}
+     <h2>بيانات الوسيط </h2>
      <div className="AdminCss">
                {/* <h2><b><u> ADMIN NAME..</u></b></h2> */}
                {data.map(med_id=>{
                  return <div>
                    <p>{med_id.med_id}</p>
                    <p>{med_id.name}</p>
+                   <p>{med_id .email}</p>
+                   <p>{med_id .mobile}</p>
                  </div>
                })}
        </div>

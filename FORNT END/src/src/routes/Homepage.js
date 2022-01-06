@@ -15,17 +15,23 @@ export default class Homepage extends Component {
             this.setState({ RelList });
         });
 
-        axios({
-         method:"post",
-         url:"/realestate/add",      //اضافه الصور
-         data:{
-             id:1,
-            location:"سكاكا ",
-            space:"1000M",
-             img:"https://tekce.net/files/upload/images/apartments-for-sale-in-serik.jpg",
-             
-         }  
-     })
+    //     axios({
+    //      method:"post",
+    //      url:"/realestate/add",      //اضافه الصور
+    //      data:{
+    //          id:1,
+    //         location:"سكاكا ",
+    //         space:"1000M",
+    //          img:"https://tekce.net/files/upload/images/apartments-for-sale-in-serik.jpg",
+    //          Detials: "الطابق الثاني يوجد فيها خمسه غرف الايجار الشهري5000 ريال"
+    //      }  
+    //  })
+
+     
+
+
+
+
 
 
 
@@ -65,7 +71,7 @@ export default class Homepage extends Component {
                                   {/* عرض الصور */}
 
                                 <td>{item.location}</td>
-                                <td>{item.mediator.id}</td>       
+                                {/* <td>{item.mediator.id}</td>        */}
                                
                                 {/* <td>{item.Realestate.id}</td>
                                   //بيانات الوسيط تظهر في العقار

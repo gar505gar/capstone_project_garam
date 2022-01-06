@@ -8,8 +8,11 @@ export default function Realsteat() {
    const [location, setlocation] = useState("")
   const [space, setspace] = useState("")
    const[img,setimg] =useState("")
+   const[Detials,setDetials] =useState("")
    const[med_id,setMed_id] =useState("")
-  const [myUser, setMyUser]=useState({id:"", Location:"", space:"", img:""})
+   
+   
+  const [myUser, setMyUser]=useState({id:"", Location:"", space:"", img:""  ,Detials:"" })
 
 
   function handleid(event) {
@@ -39,12 +42,21 @@ function handleimg(event) {
 
 }
 
+function handleDetials(event) {
+  setDetials((event.target.value));
+
+}
+
+
+
 let nuwRealestate = {
   id : id ,
   location : location,
   space:space,
   img:img,
+  Detials:Detials,
   mediator:{id:med_id}
+
 }
 console.log(nuwRealestate)
 useEffect(()=>{
@@ -68,7 +80,7 @@ function handleClick(event){
     return (
       // <main style={{ padding: "1rem 0" }}>
        <main class="Gg">
-        <h2>Expenses</h2>
+        <h2>ادخال عقار</h2>
           <form onSubmit={handleClick}>
         <hr />
        <div>
@@ -85,6 +97,9 @@ function handleClick(event){
                 <label> img </label>
                 <input type="text" name="img" placeholder="img" size="l5" onChange={handleimg} />
      
+                <label> Detials </label>
+                <input type="text" name="Detials" placeholder="Detials" size="l5" onChange={handleDetials} />
+
                 <label> med_id </label>
                 <input type="text" name="med_id" placeholder="med_id" size="l5" onChange={handlemed_id} />
 
