@@ -84,7 +84,7 @@ return(
         <input type="submit" value="submit"/>
      </div>
      </form> */}
-     <h2>بيانات الوسيط </h2>
+     <h2> Mediator Information بيانات الوسيط </h2>
      <div className="AdminCss">
                {/* <h2><b><u> ADMIN NAME..</u></b></h2> */}
                {data.map(med_id=>{

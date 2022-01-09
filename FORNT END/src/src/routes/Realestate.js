@@ -80,7 +80,7 @@ function handleClick(event){
     return (
       // <main style={{ padding: "1rem 0" }}>
        <main class="Gg">
-        <h2>ادخال عقار</h2>
+        <h2> Enter New Realestateادخال عقار</h2>
           <form onSubmit={handleClick}>
         <hr />
        <div>

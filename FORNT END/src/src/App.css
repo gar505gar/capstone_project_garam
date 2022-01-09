@@ -1,7 +1,6 @@
 body {
-  background-color: #ACCAB0;
-  background:#e1efbb url('https://i.pinimg.com/736x/4c/0a/e2/4c0ae2f9822cd78a2fa1606d634cfb75.jpg');
-  color: #01b6e4;
+  background-color: #c8c6c7;
+  color: #0e1b1f;
   padding: 40px;
   font-family: Arial;
   text-align: center;
@@ -10,7 +9,7 @@ body {
 
  
 .logo{
-  width: 440px;
+  width: 900px;
 }
  
  
@@ -26,9 +25,22 @@ img{
 
 
 .Gg{
-  background-color: rgba(255, 255, 255, 0.842);
+  background-color: #a27e44;
 }
 
+.mn{
+  font-family: ‘Helvetica’, ‘Arial’, sans-serif;
+  display: inline-block;
+    font-size: 12px;
+    padding: 1em 2em;
+    margin-top: 0px;
+   margin-bottom: 12px;
+     background-color:#a27e44;
+    border-radius: 10px;
+   border: none;
+   cursor: pointer;
+     position: relative;
+}
 
 
 

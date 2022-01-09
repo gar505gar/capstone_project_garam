@@ -15,20 +15,27 @@ import Homepage from './routes/Homepage'; //
 import Onherservice from './routes/Onherservice'; 
 import Login from './routes/Login';
 import Mediator from './routes/mediator';
+import ViewUser from './routes/ViewUser';
 ReactDOM.render(
   <BrowserRouter>
     <Routes> 
       <Route path="/" element={<App />}>
 
         <Route path="home" element={<Home />} />
+
+       
+
         <Route path="buildings" element={< Buildings/>} />
 
         <Route path="Homepage" element={<Homepage />} />
 
         <Route path="Login" element={<Login />} />
 
+        <Route path="ViewUser" element={<ViewUser />} />
 
         <Route path="realestate" element={<Realestate />}/>
+        
+
 
         <Route path="mediator" element={<Mediator />} />
 

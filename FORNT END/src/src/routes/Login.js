@@ -29,20 +29,20 @@ export default function Login() {
 
         <main class="Gg">
             
-        <h2>تسجيل دخول</h2>
+        <h2>Log In تسجيل دخول</h2>
           <form >
         <br />
        <div>
-                <label> ايميل </label>
+                <label> ايميل  Email</label>
                 <input type="email" id="#{label}" required="required" onChange={ e=>setEmail(e.target.value)}/>
                 <br />
-                <label> كلمه المرور</label>
+                <label>  Password كلمه المرور</label>
                 <input type="password" id="#{label}" required="required" onChange={e => setPassword(e.target.value)}/>
                 <br />
                 <div class="button-container">
                             <button onClick={login}><span>دخول</span></button>
                         </div>
-                        <div class="footer"><a href="#">نسيت كلمه المرور</a></div>
+                        <div class="footer"><a href="#"> Forgot Password نسيت كلمه المرور</a></div>
              </div>
              </form>
       </main>

@@ -43,7 +43,17 @@ axios({
 
 
 
-
+// axios({
+//   method:"post",
+//   url:"/realestate/addn",      //اضافه الصور
+//   data:{
+//       id:7,
+//      location:"حائل ",
+//      space:"1666M",
+//       img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVz1m4pyGRdbf74hEmFTVkDtKrFU2g4WY9ka1We3F6EU7UBjBTIBZUpZ0SbMXaIi7BR-A&usqp=CAU",
+//       detials :"الطابق الاول عدد الفرف ثلاث الايجار الشهري 3000ريال "
+//   }  
+// })
 
 
 
@@ -62,19 +72,21 @@ axios({
       >
       
        
-      <Link to="/home" > الصفحه الرئيسيه </Link> |{" "}
-      <Link to="/login" >  تسجيل دخول </Link> |{" "}
-      <Link to="/users">تسجيل</Link> |{" "}
-      <Link to="/realsteat">ادخال العقارات </Link> |{" "}
+      <Link to="/home" ><button className="mn">(Homepage) الصفحه الرئيسيه </button></Link> |{"            "}
+      <Link to="/login" ><button className="mn">(Sign Up) تسجيل دخول </button></Link> |{" "}
+
+      <Link to="/users"><button className="mn">(Login In)تسجيل </button></Link> |{" "}
+      <Link to="/realsteat"><button className="mn"> (Register New Realestate)ادخال العقارات </button></Link> |{" "}
      
-        <Link to="/Homepage">العقارات </Link> |{" "}
-        <Link to="/Onherservice"> الوسيط</Link> |{" "}
-        <Link to="/mediator">عرض الاوسطاء </Link> |{" "}
+        <Link to="/Homepage"><button className="mn"> (Show all Realestae)العقارات </button></Link> |{" "}
 
+        <Link to="/Onherservice"><button className="mn"> (Register New Mediator) الوسيط</button></Link> |{" "}
+        <Link to="/mediator"><button className="mn"> (Show Mediators)عرض الاوسطاء </button></Link> |{" "}
 
+        <Link to="/ViewUser"><button className="mn"> (View all users) عرض المستخدمين</button> </Link> |{" "}
 
-
-        <Link to="realsteats">عرض الاوسطاء </Link> |{" "}//
+        
+        
 
 
       

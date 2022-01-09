@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 export default function Users() {
 
   const [id, setid] = useState("")
@@ -64,7 +64,7 @@ function handleClick(event){
     return (
       // <main style={{ padding: "1rem 0" }}>
       <main class="Gg">
-        <h2>تسجيل </h2>
+        <h2>Sign Up تسجيل </h2>
           <form onSubmit={handleClick}>
         <hr />
        <div>
@@ -81,6 +81,8 @@ function handleClick(event){
                 <input type="text" name="mobilenambwr" placeholder="mobilenambwr" size="l5" onChange={handlemobilenambwr} />
      
                 <input type="submit" value="submit"/>
+
+                <Link to="/ViewUser"><button> انتقال</button></Link> 
              </div>
              </form>
        </main>
