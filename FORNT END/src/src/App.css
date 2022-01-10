@@ -13,7 +13,9 @@ body {
 }
  
  
- 
+/* .img{
+  width:90%;
+ } */
 
 img{
   transition: 0.3s;
@@ -26,8 +28,8 @@ img{
 
 .Gg{
   background-color: #a27e44;
+  
 }
-
 .mn{
   font-family: ‘Helvetica’, ‘Arial’, sans-serif;
   display: inline-block;
@@ -43,7 +45,18 @@ img{
 }
 
 
+input{
+  display: block;
+  font-size: 1.2em;
+  padding: 0.25em;
+  width: 70%;
+  margin-bottom: 1px;
+  border-radius: 1px;
+  border: 2px solid #a27e44;
 
+
+
+}
 
 
 

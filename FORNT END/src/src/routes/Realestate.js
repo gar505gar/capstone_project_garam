@@ -10,6 +10,9 @@ export default function Realsteat() {
    const[img,setimg] =useState("")
    const[Detials,setDetials] =useState("")
    const[med_id,setMed_id] =useState("")
+   const [user,setUser] = useState()
+   const [email, setEmail] = useState(localStorage.getItem('email'))
+
    
    
   const [myUser, setMyUser]=useState({id:"", Location:"", space:"", img:""  ,Detials:"" })
@@ -55,7 +58,8 @@ let nuwRealestate = {
   space:space,
   img:img,
   Detials:Detials,
-  mediator:{id:med_id}
+  mediator:{id:med_id} , 
+  users:user
 
 }
 console.log(nuwRealestate)
@@ -76,9 +80,24 @@ function handleClick(event){
    data:nuwRealestate
  });
 }
+useEffect(()=>{
+
+  setEmail(localStorage.getItem('email'))
+  
+        
+             axios.get(`api/User/getuserbyemail/${email}`)
+              .then(response=>{
+                setUser(response.data) 
+                console.log("user", user)
+               
+             })
+  console.log("email", email) ;
+ },[])
 
     return (
-      // <main style={{ padding: "1rem 0" }}>
+     
+      <>
+      {email ?  (
        <main class="Gg">
         <h2> Enter New Realestateادخال عقار</h2>
           <form onSubmit={handleClick}>
@@ -110,9 +129,9 @@ function handleClick(event){
 
              </div>
              </form>
-      </main>
+      </main>):(<div> You need to login before </div>)}
 
-
+</>
     );
   }
 

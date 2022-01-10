@@ -8,7 +8,7 @@ export default function Login() {
     const [password, setPassword] = useState('')
    /*  const authContext = useContext(AuthContext) */
     function login(e) {
-        let employee = {
+        let user = {
             email: email,
             password: password,
             
@@ -20,8 +20,15 @@ export default function Login() {
         axios({
             method: 'post',
             url: 'api/security/login',
-            data: employee
-        }).then((response)=> alert(response.data));
+            data: user
+        }).then((response)=>{alert(response.data)
+            if(response.data == " Authenticated"){
+                localStorage.setItem('email', email);
+            }else{
+                localStorage.setItem('email', "");
+            }
+        
+        });
         
     }
     return (

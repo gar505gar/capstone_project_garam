@@ -7,6 +7,7 @@ export default function Users() {
   const [id, setid] = useState("")
   const [name, setname] = useState("")
   const [email, setemail] = useState("")
+  const [password, setpassword] = useState("")
   const [mobilenambwr, setmobilenambwr] = useState("")
 
   // const [myUser, setMyUser]=useState({id:"", name:"", email:"", mobilenambwr:""})
@@ -28,6 +29,12 @@ function handleemail(event) {
 
 
 }
+function handlepassword(event) {
+
+  setpassword((event.target.value));
+
+
+}
 
 function handlemobilenambwr(event) {
 
@@ -40,7 +47,8 @@ let nuwUser = {
   id : id ,
   name :name ,
 email:email,
-mobilenambwr:mobilenambwr
+password:password,
+phone:mobilenambwr
 }
 
 // useEffect(()=>{
@@ -70,19 +78,23 @@ function handleClick(event){
        <div>
                 <label> id </label>
                 <input type="text" name="id" placeholder="id" size="15" onChange={handleid} />
-                <hr />
-                <label> name</label>
+                <br></br>
+                <label> Name</label>
                 <input type="text" name="name" placeholder="name" size="15" onChange={handlename} />
-                <hr />
-                <label>  </label>
+                <br></br>
+                <label> Email </label>
                 <input type="text" name="email" placeholder="email" size="l5" onChange={handleemail} />
-
+                <br></br>
+                <label> Password </label>
+                <input type="text"  placeholder="password" size="l5" onChange={handlepassword} />
+                <br></br>
                  <label> phone </label>
                 <input type="text" name="mobilenambwr" placeholder="mobilenambwr" size="l5" onChange={handlemobilenambwr} />
+                <br></br>
      
                 <input type="submit" value="submit"/>
 
-                <Link to="/ViewUser"><button> انتقال</button></Link> 
+                <Link to="/MyProfile"><button> انتقال</button></Link> 
              </div>
              </form>
        </main>
