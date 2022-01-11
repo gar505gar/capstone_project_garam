@@ -17,89 +17,89 @@ export default function Users() {
 
     setid((event.target.value));
 
-}
-function handlename(event) {
-
-  setname((event.target.value));
-
-}
-function handleemail(event) {
-
-  setemail((event.target.value));
-
-
-}
-function handlepassword(event) {
-
-  setpassword((event.target.value));
-
-
-}
-
-function handlemobilenambwr(event) {
-
-  setmobilenambwr((event.target.value));
-
-}
-
-
-let nuwUser = {
-  id : id ,
-  name :name ,
-email:email,
-password:password,
-phone:mobilenambwr
-}
-
-// useEffect(()=>{
-//   axios.get("api/User")
-//    .then(response=>{
-//      console.log(response.data)
-//      setMyUser(response.data[0])
-//   })
-//   return()=>{}
-// },[])
-function handleClick(event){
-  event.preventDefault();
-  console.log("add func")
- axios({
-   method:'post',
-   url:'/api/User/add',
-   data:nuwUser
- });
-}
-
-    return (
-      // <main style={{ padding: "1rem 0" }}>
-      <main class="Gg">
-        <h2>Sign Up تسجيل </h2>
-          <form onSubmit={handleClick}>
-        <hr />
-       <div>
-                <label> id </label>
-                <input type="text" name="id" placeholder="id" size="15" onChange={handleid} />
-                <br></br>
-                <label> Name</label>
-                <input type="text" name="name" placeholder="name" size="15" onChange={handlename} />
-                <br></br>
-                <label> Email </label>
-                <input type="text" name="email" placeholder="email" size="l5" onChange={handleemail} />
-                <br></br>
-                <label> Password </label>
-                <input type="text"  placeholder="password" size="l5" onChange={handlepassword} />
-                <br></br>
-                 <label> phone </label>
-                <input type="text" name="mobilenambwr" placeholder="mobilenambwr" size="l5" onChange={handlemobilenambwr} />
-                <br></br>
-     
-                <input type="submit" value="submit"/>
-
-                <Link to="/MyProfile"><button> انتقال</button></Link> 
-             </div>
-             </form>
-       </main>
-
-
-    );
   }
-//export default users
+  function handlename(event) {
+
+    setname((event.target.value));
+
+  }
+  function handleemail(event) {
+
+    setemail((event.target.value));
+
+
+  }
+  function handlepassword(event) {
+
+    setpassword((event.target.value));
+
+
+  }
+
+  function handlemobilenambwr(event) {
+
+    setmobilenambwr((event.target.value));
+
+  }
+
+
+  let nuwUser = {
+    id: id,
+    name: name,
+    email: email,
+    password: password,
+    phone: mobilenambwr
+  }
+
+  // useEffect(()=>{
+  //   axios.get("api/User")
+  //    .then(response=>{
+  //      console.log(response.data)
+  //      setMyUser(response.data[0])
+  //   })
+  //   return()=>{}
+  // },[])
+  function handleClick(event) {
+    event.preventDefault();
+    console.log("add func")
+    axios({
+      method: 'post',
+      url: '/api/User/add',
+      data: nuwUser
+    });
+  }
+
+  return (
+    // <main style={{ padding: "1rem 0" }}>
+    <main class="Gg">
+      <h2>Sign Up تسجيل </h2>
+      <form onSubmit={handleClick}>
+        <hr />
+        <div>
+          <label> id </label>
+          <input type="text" name="id" placeholder="id" size="15" onChange={handleid} />
+          <br></br>
+          <label> Name</label>
+          <input type="text" name="name" placeholder="name" size="15" onChange={handlename} />
+          <br></br>
+          <label> Email </label>
+          <input type="text" name="email" placeholder="email" size="l5" onChange={handleemail} />
+          <br></br>
+          <label> Password </label>
+          <input type="text" placeholder="password" size="l5" onChange={handlepassword} />
+          <br></br>
+          <label> phone </label>
+          <input type="text" name="mobilenambwr" placeholder="mobilenambwr" size="l5" onChange={handlemobilenambwr} />
+          <br></br>
+
+          <input type="submit" value="submit" />
+
+          <Link to="/MyProfile"><button> انتقال</button></Link>
+        </div>
+      </form>
+    </main>
+
+
+  );
+}
+

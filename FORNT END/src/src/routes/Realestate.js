@@ -101,14 +101,14 @@ useEffect(()=>{
        <main class="Gg">
         <h2> Enter New Realestateادخال عقار</h2>
           <form onSubmit={handleClick}>
-        <hr />
+       
        <div>
                 <label> id </label>
                 <input type="text" name="id" placeholder="id" size="15" onChange={handleid} />
-                <hr />
+                
                 <label> Location</label>
                 <input type="text" name="Location" placeholder="Location" size="15" onChange={handlename} />
-                <hr />
+                
                 
                  <label> space </label>
                 <input type="text" name="space" placeholder="space" size="l5" onChange={handlemobilenambwr} />

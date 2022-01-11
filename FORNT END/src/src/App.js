@@ -83,7 +83,7 @@ axios({
       </nav>
       <Outlet/>
       {/* <div>
-      // <img src={img} alt= "img"class="img"/>                                   اضافه الايقونات
+       <img src={img} alt= "img"class="img"/>                                   
       </div>
   */}
 

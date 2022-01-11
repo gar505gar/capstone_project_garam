@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import './hom.css'
 
+
 export default class AllRealestates extends Component {
   constructor(props){
   super(props)
@@ -77,7 +78,13 @@ console.log(response.data);
                                 <br></br>
 
                             </div>
+       
+
+
                         </div>
+
+
+
                     ))}
                 </div>
             </>)
