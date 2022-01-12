@@ -57,18 +57,18 @@ axios({
       >
       
        
-      <Link to="/AllRealestates" ><button className="mn">(AllRealestates) معرض العقارات </button></Link> |{"            "}
-      <Link to="/login" ><button className="mn">(Login In) تسجيل دخول </button></Link> |{" "}
+      <Link to="/AllRealestates" ><button >(AllRealestates) معرض العقارات </button></Link> {"            "}
+      <Link to="/login" ><button >(Login In) تسجيل دخول </button></Link> {" "}
 
-      <Link to="/users"><button className="mn">(Sign up)تسجيل </button></Link> |{" "}
-      <Link to="/realsteat"><button className="mn"> (Register New Realestate)ادخال العقارات </button></Link> |{" "}
+      <Link to="/users"><button >(Sign up)تسجيل </button></Link> {" "}
+      <Link to="/realsteat"><button > (Register New Realestate)ادخال العقارات </button></Link> {" "}
      
-        <Link to="/MyRealestates"><button className="mn"> (Show My Realestates)العقارات </button></Link> |{" "}
+        <Link to="/MyRealestates"><button > (Show My Realestates)العقارات </button></Link> {" "}
 
-        <Link to="/AddMediator"><button className="mn"> (Register New Mediator) الوسيط</button></Link> |{" "}
-        <Link to="/mediator"><button className="mn"> (Show Mediators)عرض الاوسطاء </button></Link> |{" "}
+        <Link to="/AddMediator"><button > (Register New Mediator) الوسيط</button></Link> {" "}
+        <Link to="/mediator"><button > (Show Mediators)عرض الاوسطاء </button></Link> {" "}
 
-        <Link to="/MyProfile"><button className="mn"> (My Profile) الملف الشخصي</button> </Link> |{" "}
+        <Link to="/MyProfile"><button >(My Profile) ملف الشخصي</button> </Link> {" "}
 
         
         
@@ -84,8 +84,8 @@ axios({
       <Outlet/>
       {/* <div>
        <img src={img} alt= "img"class="img"/>                                   
-      </div>
-  */}
+      </div> */}
+ 
 
     </div>
 

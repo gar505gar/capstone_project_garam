@@ -61,7 +61,7 @@ export default class MyRealestates extends Component {
                             
                             <th >location</th>
                             <th >space</th>
-                            
+                            <th>Detials</th>
                         </tr>
                     </thead>
                     <tbody>

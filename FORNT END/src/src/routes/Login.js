@@ -35,7 +35,7 @@ export default function Login() {
         // <main style={{ padding: "1rem 0" }}>
 
         <main class="Gg">
-            
+            <div className='g1'>
         <h2>Log In تسجيل دخول</h2>
           <form >
         <br />
@@ -51,7 +51,9 @@ export default function Login() {
                         </div>
                         <div class="footer"><a href="#"> Forgot Password نسيت كلمه المرور</a></div>
              </div>
+
              </form>
+             </div>
       </main>
     )
 }

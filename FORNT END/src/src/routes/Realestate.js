@@ -99,6 +99,7 @@ useEffect(()=>{
       <>
       {email ?  (
        <main class="Gg">
+         <div className="g1">
         <h2> Enter New Realestateادخال عقار</h2>
           <form onSubmit={handleClick}>
        
@@ -125,10 +126,11 @@ useEffect(()=>{
                
                 <input type="submit" value="submit"/>
 
-                <Link to="/Homepage"><button>العقارات </button></Link> 
+                <Link to="/MyRealestates"><button >العقارات </button></Link> 
 
              </div>
              </form>
+             </div>
       </main>):(<div> You need to login before </div>)}
 
 </>

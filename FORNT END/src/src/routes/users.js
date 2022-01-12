@@ -72,6 +72,8 @@ export default function Users() {
   return (
     // <main style={{ padding: "1rem 0" }}>
     <main class="Gg">
+
+      <div className="g1">
       <h2>Sign Up تسجيل </h2>
       <form onSubmit={handleClick}>
         <hr />
@@ -97,6 +99,7 @@ export default function Users() {
           <Link to="/MyProfile"><button> انتقال</button></Link>
         </div>
       </form>
+      </div>
     </main>
 
 
