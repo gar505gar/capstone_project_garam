@@ -3,7 +3,10 @@ import {Outlet, Link } from "react-router-dom";
 import axios from 'axios'
  import './App.css'
  import Logo from "./routes/imag/Logo.png";
-//  import img from "./routes/imag/img.png";
+ import Img from "./routes/imag/Img.png";
+ import Img1 from "./routes/imag/Img1.png";
+ import Img2 from "./routes/imag/Img2.png";
+
 export default function App() {
   axios({
     method:'post',
@@ -49,6 +52,13 @@ axios({
      <img src={Logo} alt= "Logo"className="logo"/>
       <h1></h1>
       
+      <div >  
+         <img src={Img} alt= "img"className="img1"/>   
+
+         <img src={Img1} alt= "img1"className="img1"/>  
+         <img src={Img2} alt= "img2"className="img1"/>  
+
+       </div>
       <nav
         style={{
           borderBottom: "solid 1px",
@@ -70,6 +80,10 @@ axios({
 
         <Link to="/MyProfile"><button >(My Profile) ملف الشخصي</button> </Link> {" "}
 
+
+
+
+        
         
         
        
@@ -82,9 +96,7 @@ axios({
 
       </nav>
       <Outlet/>
-      {/* <div>
-       <img src={img} alt= "img"class="img"/>                                   
-      </div> */}
+    
  
 
     </div>

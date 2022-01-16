@@ -7,15 +7,16 @@ import Users from './routes/users';
 import AllRealestates from './routes/AllRealestates';
 import Realestate from './routes/Realestate';
 //import Mediator from './routes/mediator';
-
 import MyRealestates from './routes/MyRealestates'; //
 import AddMediator from './routes/AddMediator'; 
 import Login from './routes/Login';
 import Mediator from './routes/mediator';
 import MyProfile from './routes/MyProfile';
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes> 
+
       <Route path="/" element={<App />}>
 
         <Route path="AllRealestates" element={<AllRealestates />} />

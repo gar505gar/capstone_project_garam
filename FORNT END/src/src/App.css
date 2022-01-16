@@ -12,6 +12,17 @@ body {
 }
  
 
+.img1{
+width: 50px;
+margin: 2em;
+
+}
+
+
+
+
+
+
 .Gg{
   background-color: #a27e4436;
   }
@@ -54,8 +65,6 @@ input{
   border-top: 5px solid #000000;
   box-shadow: 0 2px 10px rgba(92, 92, 92, 0.8)
 }
-
-
 
 
 
