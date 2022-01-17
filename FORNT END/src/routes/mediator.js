@@ -7,6 +7,7 @@ export default function Mediator() {
   const [email, setemail] = useState("")
   const [mobile, setmobile] = useState("")
    const [mymediator, setMymediator]=useState({id:id, name:name, email:email, mobile:mobile})
+    const[data ,setData]=useState([{name:""}]);
   function handleid(event) {
     setid((event.target.value));
 }
@@ -25,14 +26,14 @@ let nuwmediator = {
 email:email,
 mobile:mobile
 }
- useEffect(()=>{
-  axios.get("api/mediator")
-    .then(response=>{
-      console.log(response.data)
-      setMymediator(response.data)
-   })
-   return()=>{}
- },[])
+//  useEffect(()=>{
+//   axios.get("api/mediator")
+//     .then(response=>{
+//       console.log(response.data)
+//       setMymediator(response.data)
+//    })
+//    return()=>{}
+//  },[])
  function handleAddMediator(event){
   event.preventDefault();
   console.log("nuwmediator",nuwmediator)
@@ -42,10 +43,31 @@ mobile:mobile
    data:nuwmediator
  });
 }
+
+
+  // //fun Display admin name
+  useEffect(()=>{
+    axios.get("/api/mediator")
+    .then(result=>setData(result.data));
+    console.log(data);
+    },[]);
+
+
+
 return(
+
  <div>
- <main style={{ padding: "1rem 0" }}>
-<h2>Mediator</h2>
+   {/* <div className="AdminCss">
+               <h2><b><u> ADMIN NAME..</u></b></h2>
+               {data.map(med_id=>{
+                 return <div>
+                   <p>{name.name}</p>
+                 </div>
+               })}
+       </div> */}
+ {/* <main style={{ padding: "1rem 0" }}> */}
+ <main class="Gg">
+{/* <h2>Mediator</h2>
   <form onSubmit={handleAddMediator}>
 <hr />
 <div>
@@ -61,8 +83,20 @@ return(
         <input type="text" name="mobile" placeholder="mobile" size="l5" onChange={handlemobile} />
         <input type="submit" value="submit"/>
      </div>
-     </form>
-     <h2>my Mediator details are:  {JSON.stringify(mymediator)}</h2>
+     </form> */}
+     <h2> Mediator Information بيانات الوسيط </h2>
+     <div className="AdminCss">
+               {/* <h2><b><u> ADMIN NAME..</u></b></h2> */}
+               {data.map(med_id=>{
+                 return <div>
+                   <p>{med_id.med_id}</p>
+                   <p>{med_id.name}</p>
+                   <p>{med_id .email}</p>
+                   <p>{med_id .mobile}</p>
+                 </div>
+               })}
+       </div>
+
 </main>
 </div>
 )

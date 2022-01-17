@@ -8,7 +8,7 @@ export default function Login() {
     const [password, setPassword] = useState('')
    /*  const authContext = useContext(AuthContext) */
     function login(e) {
-        let employee = {
+        let user = {
             email: email,
             password: password,
             
@@ -19,29 +19,41 @@ export default function Login() {
         //Send Api request to validate data and get token
         axios({
             method: 'post',
-            url: 'api/security/login',
-            data: employee
-        }).then((response)=> alert(response.data));
+            url: 'api/User/login',
+            data: user
+        }).then((response)=>{alert(response.data)
+            if(response.data == " Authenticated"){
+                localStorage.setItem('email', email);
+            }else{
+                localStorage.setItem('email', "");
+            }
+        
+        });
         
     }
     return (
-        <main style={{ padding: "1rem 0" }}>
-        <h2>تسجيل دخول</h2>
+        // <main style={{ padding: "1rem 0" }}>
+
+        <main class="Gg">
+            <div className='g1'>
+        <h2>Log In تسجيل دخول</h2>
           <form >
-        <hr />
+        <br />
        <div>
-                <label> ايميل </label>
+                <label> ايميل  Email</label>
                 <input type="email" id="#{label}" required="required" onChange={ e=>setEmail(e.target.value)}/>
-                <hr />
-                <label> كلمه المرور</label>
+                <br />
+                <label>  Password كلمه المرور</label>
                 <input type="password" id="#{label}" required="required" onChange={e => setPassword(e.target.value)}/>
-                <hr />
+                <br />
                 <div class="button-container">
                             <button onClick={login}><span>دخول</span></button>
                         </div>
-                        <div class="footer"><a href="#">نسيت كلمه المرور</a></div>
+                        <div class="footer"><a href="#"> Forgot Password نسيت كلمه المرور</a></div>
              </div>
+
              </form>
+             </div>
       </main>
     )
 }

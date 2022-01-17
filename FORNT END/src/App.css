@@ -1,39 +1,75 @@
 body {
-  background-color: #ACCAB0;
-  background:#e1efbb url('https://i.pinimg.com/736x/4c/0a/e2/4c0ae2f9822cd78a2fa1606d634cfb75.jpg');
-  color: #01b6e4;
+  background-color: #c8c6c7;
+  color: #0e1b1f;
   padding: 40px;
   font-family: Arial;
   text-align: center;
   
 }
-
  
 .logo{
-  width: 440px;
+  width: 770px;
 }
  
- 
- 
 
-img{
-  transition: 0.3s;
-  margin-left: 1%;
-  margin-right: 1%;
-  width: 20vw;
-  height: 33vh;
+.img1{
+width: 50px;
+margin: 2em;
+
+}
+
+.b {
+  position: absolute;
+  left: auto;
+ 
+  
+} 
+
+
+
+
+.Gg{
+  background-color: #a27e4436;
+  }
+
+button{
+  font-family: ‘Helvetica’, ‘Arial’, sans-serif;
+  display: inline-block;
+    font-size: 12px;
+    padding: 1em 2em;
+    margin-top: 0px;
+   margin-bottom: 12px;
+      background-color:#a27e44; 
+    border-radius: 10px;
+   border: none;
+   cursor: pointer;
+     position: relative;
+     
+
 }
 
 
+input{
+ 
+  display: block;
+  font-size: 1.2em;
+  padding: 0.25em;
+  width: 90%;
+  margin-bottom: 1px;
+  border-radius: 1px;
+  border: 2px solid #a27e44;
+}
 
 
+.g1{
 
-
-
-
-
-
-
+  width: 400px;
+  background: #a27e44b6;
+  padding: 2% ;
+  margin: 1em auto;
+  border-top: 5px solid #000000;
+  box-shadow: 0 2px 10px rgba(92, 92, 92, 0.8)
+}
 
 
 
