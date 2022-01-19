@@ -12,7 +12,7 @@ export default function Realsteat() {
    const[med_id,setMed_id] =useState("")
    const [user,setUser] = useState()
    const [email, setEmail] = useState(localStorage.getItem('email'))
-
+   const[type ,setType]= useState("")
    
    
   const [myUser, setMyUser]=useState({id:"", Location:"", space:"", img:""  ,Detials:"" })
@@ -49,7 +49,9 @@ function handleDetials(event) {
   setDetials((event.target.value));
 
 }
-
+function handleSelectType(event){
+  setType(event.target.value);
+}
 
 
 let nuwRealestate = {
@@ -57,7 +59,8 @@ let nuwRealestate = {
   location : location,
   space:space,
   img:img,
-  Detials:Detials,
+  details:Detials,
+  type:type,
   mediator:{id:med_id} , 
   users:user
 
@@ -105,24 +108,30 @@ useEffect(()=>{
        
        <div>
                 <label> id </label>
-                <input type="text" name="id" placeholder="id" size="15" onChange={handleid} />
+                <input type="text" name="id" placeholder="id" size="15" onChange={handleid}required />
                 
                 <label> Location</label>
-                <input type="text" name="Location" placeholder="Location" size="15" onChange={handlename} />
+                <input type="text" name="Location" placeholder="Location" size="15" onChange={handlename}required />
                 
                 
                  <label> space </label>
-                <input type="text" name="space" placeholder="space" size="l5" onChange={handlemobilenambwr} />
+                <input type="text" name="space" placeholder="space" size="l5" onChange={handlemobilenambwr} required/>
      
                 <label> img </label>
-                <input type="text" name="img" placeholder="img" size="l5" onChange={handleimg} />
+                <input type="text" name="img" placeholder="img" size="l5" onChange={handleimg}required />
      
                 <label> Detials </label>
-                <input type="text" name="Detials" placeholder="Detials" size="l5" onChange={handleDetials} />
+                <input type="text" name="Detials" placeholder="Detials" size="l5" onChange={handleDetials}required />
 
                 <label> med_id </label>
-                <input type="text" name="med_id" placeholder="med_id" size="l5" onChange={handlemed_id} />
-
+                <input type="text" name="med_id" placeholder="med_id" size="l5" onChange={handlemed_id} required/>
+                <label> Buy/Sell </label>
+                <select  onChange={handleSelectType} >
+                <option value="">الرجاء تحديد خيار</option>
+                <option value="بيع">بيع</option>
+                <option value="شراء">شراء </option>
+                
+            </select>
                
                 <input type="submit" value="submit"/>
 

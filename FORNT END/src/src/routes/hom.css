@@ -3,10 +3,12 @@
     transition: 0.3s;
     margin-left: 1%;
     margin-right: 5%;
-    width: 40vw;
+    margin-bottom: 5%;
+    width: 26%;
     height: 50vh;
   align-items: center;
   text-align: center;
+  display: inline-block;
   }
 .img{
   transition: 0.3s;
@@ -23,9 +25,12 @@
     padding: 2px 16px;
   }
 .flexer{
-    display: flex;
-flex-basis: 33.333%;
+  width:100%;
+    
+    
 }
+
+
 .shower .opening {
     display: none;
   }
@@ -67,3 +72,5 @@ flex-basis: 33.333%;
     visibility: visible;
     opacity: 1;
   }
+
+  

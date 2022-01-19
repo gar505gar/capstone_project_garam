@@ -18,7 +18,12 @@ margin: 2em;
 
 }
 
-
+.b {
+  position: absolute;
+  left: auto;
+ 
+  
+} 
 
 
 

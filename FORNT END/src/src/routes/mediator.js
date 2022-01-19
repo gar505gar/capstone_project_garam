@@ -85,7 +85,7 @@ return(
      </div>
      </form> */}
      <h2> Mediator Information بيانات الوسيط </h2>
-     <div className="AdminCss">
+     <div className="Mm">
                {/* <h2><b><u> ADMIN NAME..</u></b></h2> */}
                {data.map(med_id=>{
                  return <div>

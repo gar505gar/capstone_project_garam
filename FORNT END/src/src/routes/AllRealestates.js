@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import './hom.css'
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default class AllRealestates extends Component {
   constructor(props){
@@ -64,29 +67,29 @@ console.log(response.data);
     return (
       <>
         <h2 className='work-title'><span></span>  </h2>
-                <div className='flexer' >
+              
+                  <div className='flexer'>
                     {this.state.hom.map(item => (
+                      
                         <div className='card' key={item.id}>
                             <div className='contianer'>
                                 <img className='img' src={item.img} />
                                 <h4 >{item.location}</h4>
                                 <hr className='line' />
-                                <p>{item.detials}</p>
+                                <p>{item.details}</p>
                                 <p>{item.space}</p>
                                 <div class="tooltip">
                                 </div>
                                 <br></br>
 
                             </div>
-       
-
-
                         </div>
-
+                        
 
 
                     ))}
-                </div>
+               </div>
+                
             </>)
     }
 }

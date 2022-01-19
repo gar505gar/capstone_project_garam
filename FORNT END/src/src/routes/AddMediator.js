@@ -35,8 +35,9 @@ let AddnewMediator = {
     }
     return (
         <main class="Gg">
+           <div className='g1'>
 
-<div className="g1">
+
         {/* // <div>
         //     <form onSubmit={(e)=>{handleClickMyOnhersrvice(e)}}>
         //     <h3>ADD Ticket..</h3> */}

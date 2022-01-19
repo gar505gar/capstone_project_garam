@@ -19,7 +19,7 @@ export default function Login() {
         //Send Api request to validate data and get token
         axios({
             method: 'post',
-            url: 'api/security/login',
+            url: 'api/User/login',
             data: user
         }).then((response)=>{alert(response.data)
             if(response.data == " Authenticated"){
@@ -35,9 +35,7 @@ export default function Login() {
         // <main style={{ padding: "1rem 0" }}>
 
         <main class="Gg">
-            <div className='g1'> 
-
-               
+            <div className='g1'>
         <h2>Log In تسجيل دخول</h2>
           <form >
         <br />
@@ -55,7 +53,7 @@ export default function Login() {
              </div>
 
              </form>
-             </div> 
+             </div>
       </main>
     )
 }

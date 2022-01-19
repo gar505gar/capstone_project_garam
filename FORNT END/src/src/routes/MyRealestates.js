@@ -59,9 +59,12 @@ export default class MyRealestates extends Component {
                         <tr>
                             <th >id</th>
                             
-                            <th >location</th>
-                            <th >space</th>
-                            <th>Detials</th>
+                            <th >Image</th>
+                            <th >Location</th>
+                            <th>Space</th>
+                            <th>Details</th>
+                            <th>Type</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -83,6 +86,8 @@ export default class MyRealestates extends Component {
 
                                 */}
                                 <td>{item.space}</td>
+                                <td>{item.details}</td>
+                                <td>{item.type}</td>
                                 {/* <td><button ></button></td> */}
                                 <td><button onClick={(e) => this.deleteSpecialist(item.id, e)}>delete</button></td>
                             </tr>

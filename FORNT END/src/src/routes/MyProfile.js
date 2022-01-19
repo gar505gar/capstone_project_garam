@@ -13,9 +13,8 @@ export default class MyProfile extends Component {
     componentDidMount() {
         let email = localStorage.getItem('email');
         axios.get(`api/User/getuserbyemail/${email}`).then(response => {
-            console.log(response.data)
-            const User = response.data
-            this.setState({ user: User });
+            
+            this.setState({ user: response.data });
         });
 
 
@@ -32,7 +31,7 @@ export default class MyProfile extends Component {
         return (
             <>
                 {this.state.email ? (
-                    <main class="Gg">
+                    <main className="Gg">
                         <div>
                             <table >
                                 <thead>
@@ -41,19 +40,17 @@ export default class MyProfile extends Component {
 
                                         <th >EMAIL</th>
                                         <th >PHONE</th>
-
+                                        <th >Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <div key={this.state.user.userId}>
-                                        <p>{this.state.user.name}</p>
-                                        <p>{this.state.user.email}</p>
-                                        <p>{this.state.user.mobile}</p>
-                                        {/* <p>{item.user.mobile}</p>
-                            <p>{item.services.category}</p> */}
-                                        {/* <p>{}</p> */}
-                                        <button onClick={(e) => this.deleteUser(this.state.user.userId, e)}>Delete</button>
-                                    </div>
+                                    <tr>
+                                        <td>{this.state.user.name}</td>
+                                        <td>{this.state.user.email}</td>
+                                        <td>{this.state.user.phone}</td>
+                                        <td><button onClick={(e) => this.deleteUser(this.state.user.userId, e)}>Delete</button></td>
+                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>

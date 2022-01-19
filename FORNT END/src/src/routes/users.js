@@ -96,7 +96,7 @@ export default function Users() {
 
           <input type="submit" value="submit" />
 
-          <Link to="/MyProfile"><button> انتقال</button></Link>
+          <Link to="/login"><button> انتقال</button></Link>
         </div>
       </form>
       </div>
