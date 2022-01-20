@@ -12,18 +12,19 @@ public class Mediator {
 
     @Id
     @GeneratedValue
-    private int id;
+    private int med_id;
     private String name;
     private String email;
     private int mobile;
+
 
     @OneToMany(mappedBy = "mediator")
     @JsonIgnore
    private List<Realestate> items = new ArrayList<>();
 
 
-    public Mediator(int id, String name, String email, int mobile) {
-        this.id = id;
+    public Mediator(int med_id, String name, String email, int mobile) {
+        this.med_id = med_id;
         this.name = name;
         this.email = email;
         this.mobile = mobile;
@@ -33,11 +34,11 @@ public class Mediator {
     }
 
     public int getId() {
-        return id;
+        return med_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int med_id) {
+        this.med_id = med_id;
     }
 
     public String getName() {

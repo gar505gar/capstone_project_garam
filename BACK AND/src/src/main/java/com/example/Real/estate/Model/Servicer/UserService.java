@@ -24,6 +24,10 @@ public class UserService {
         return userRepository.findById(userId);
 
     }
+    public Optional<Users> getUserByemail(String email) {
+        return userRepository.findByEmail(email) ;
+
+    }
     public void addNewUser (Users user) {
        userRepository.save(user);
     }
@@ -33,6 +37,14 @@ public class UserService {
 //    }
     public void deleteUser(Integer userId) {
         userRepository.deleteById(userId);
+    }
+
+    public String getCheck(String email ,String password) {
+        if( userRepository.findByEmailAndPassword(email,password)==null  ) {
+            return "invalid credentials";
+        }else {
+            return " Authenticated";
+        }
     }
 }
 

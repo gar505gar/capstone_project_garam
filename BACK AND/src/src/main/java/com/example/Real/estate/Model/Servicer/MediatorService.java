@@ -12,6 +12,7 @@ import java.util.Optional;
 @Service
 public class MediatorService {
 
+
    private MediatorRepository mediatorRepository;
 
     @Autowired
@@ -32,7 +33,7 @@ public class MediatorService {
     }
 
 
-//    public void deleteMediator(Integer MediatorId){
-//        mediatorRepository.deleteAllById(MediatorId);
-//    }
+//   public void deleteMediator(Integer MediatorId){
+//        mediatorRepository.deleteById(MediatorId);
+//   }
 }

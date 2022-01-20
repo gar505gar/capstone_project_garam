@@ -1,6 +1,8 @@
 package com.example.Real.estate.Model.Entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,6 +23,7 @@ public class Users {
     private int phone;
 
     @OneToMany(mappedBy = "users")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private List<Realestate> items = new ArrayList<>();
 

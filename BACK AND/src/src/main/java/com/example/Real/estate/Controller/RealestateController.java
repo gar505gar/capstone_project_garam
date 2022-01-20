@@ -14,6 +14,7 @@ import java.util.Optional;
 @RequestMapping(path= "realestate")
 public class RealestateController {
 
+
     private RealestateService realestateService;
 
     @Autowired
@@ -26,12 +27,16 @@ public class RealestateController {
         return realestateService.getRealestates();
     }
 
-//    @GetMapping(path = "{realestateId}")
-//    public Optional<Realestate> getRealstate(@PathVariable(name = "realestateId") Integer realestateId) {
-//        return realestateService.getRealstate(realestateId);
-//    }
+   @GetMapping(path = "{realestateId}")
+   public Optional<Realestate> getRealstate(@PathVariable(name = "realestateId") Integer realestateId) {
+        return realestateService.getRealestate(realestateId);
+    }
+    @GetMapping(path = "/getRealestateByUseremail/{email}")
+        public List<Realestate> getUser(@PathVariable("email") String email) {
+        return realestateService.getRealestateByemail(email) ;
+        }
 
-    @PostMapping(path="/add")
+    @PostMapping(path="/addn")
     public void registerNewRealestate(@RequestBody Realestate realestate){
         realestateService.addNewRealestate(realestate);
     }

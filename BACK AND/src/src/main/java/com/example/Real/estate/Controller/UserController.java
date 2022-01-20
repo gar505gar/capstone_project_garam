@@ -11,7 +11,9 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/User")
+
 public class UserController<userService>  {
+
 
     private UserService userService ;
 
@@ -34,7 +36,16 @@ public class UserController<userService>  {
         userService.addNewUser(user);
     }
 
+    @GetMapping(path = "/getuserbyemail/{email}")
+    public Optional<Users> getUser(@PathVariable("email") String email) {
+        System.out.println(email);
+        return userService.getUserByemail(email) ;
+    }
 
+    @PostMapping(path= "login")
+    public String login(@RequestBody Users user){
+        return  userService.getCheck(user.getEmail(), user.getPassword());
+    }
 
     @DeleteMapping(path = "delete/{userId}")
     public void deleteArtwork(@PathVariable ("userId") Integer userId){

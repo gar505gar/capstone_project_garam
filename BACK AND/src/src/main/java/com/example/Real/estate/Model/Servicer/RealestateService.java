@@ -13,11 +13,14 @@ import java.util.Optional;
 
 @Service
 public class RealestateService {
+
     private RealestateRespository realestateRespository;
+    private UserRepository userRepository ;
 
     @Autowired
-    public RealestateService(RealestateRespository realestateRespository) {
+    public RealestateService(RealestateRespository realestateRespository , UserRepository userRepository) {
         this.realestateRespository = realestateRespository;
+        this.userRepository = userRepository ;
     }
     public List<Realestate>getRealestates(){
         return realestateRespository.findAll();
@@ -32,10 +35,13 @@ public class RealestateService {
     }
 
 
-//    public void getRealstate(Integer realestateId) {
-//       realestateRespository.deleteById(realestateId);
-//    }
-
+    public void getRealstate(Integer realestateId) {
+       realestateRespository.deleteById(realestateId);
+    }
+        public List<Realestate>getRealestateByemail(String email){
+        Optional<Users> user  = userRepository.findByEmail(email) ;
+        return user.get().getItems();
+        }
         public void deleteRealestate(Integer RealestateId){
             realestateRespository.deleteById(RealestateId);
     }
