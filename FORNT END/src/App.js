@@ -49,13 +49,13 @@ axios({
   return (
 <>
 <div className="b">
-   <a href="https://twitter.com/aqaar_ksa1?lang=ar/">
+   <a href="/">
          <img src={Img} alt= "img"className="img1" />   
         </a>
-        <a href="https://realestatejor.com/?gclid=CjwKCAiAxJSPBhAoEiwAeO_fP3eqZjIjFvyOCkmbbrd3Bni5uKZN8Adv19mnMz2WSnDyWc5qE0VrRxoCIQkQAvD_BwE/">
+        <a href="/">
          <img src={Img1} alt= "img1"className="img1"/>  
          </a>
-         <a href="https://www.youtube.com/watch?v=g2Vr0_e-Tbs/">
+         <a href="/">
          <img src={Img2} alt= "img2"className="img1"/> 
          </a>
   </div>
